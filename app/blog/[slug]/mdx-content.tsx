@@ -4,6 +4,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeSlug from "rehype-slug";
 import "highlight.js/styles/atom-one-dark.css";
+import { JSX, ClassAttributes, OlHTMLAttributes } from "react";
 
 const MdxComponents = {
   h1: (props: React.HTMLProps<HTMLHeadingElement>) => (
@@ -22,9 +23,11 @@ const MdxComponents = {
   ul: (props: React.HTMLProps<HTMLUListElement>) => (
     <ul className="mb-3" {...props} />
   ),
-  ol: (props: React.HTMLProps<HTMLOListElement>) => (
-    <ol className="mb-3" {...props} />
-  ),
+  ol: (
+    props: JSX.IntrinsicAttributes &
+      ClassAttributes<HTMLOListElement> &
+      OlHTMLAttributes<HTMLOListElement>
+  ) => <ol className="mb-3" {...props} />,
 
   img: ({
     src,
