@@ -56,7 +56,6 @@ const MdxComponents = {
 
 const MdxContent = ({ source }: { source: string }) => {
   return (
-    /* @ts-expect-error Async Server Component */
     <MDXRemote
       source={source}
       options={{
