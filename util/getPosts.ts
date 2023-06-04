@@ -19,7 +19,7 @@ export type Post<TFrontmatter> = {
 const POSTS_PATH = path.join(process.cwd(), "posts");
 
 export const getSlugs = (): string[] => {
-  const paths = globSync(`posts/*.mdx`);
+  const paths = globSync(`${POSTS_PATH}/*.mdx`);
   return paths.map((path): string => {
     const parts = path.split("\\");
     const fileName = parts[parts.length - 1];
@@ -31,7 +31,7 @@ export const getSlugs = (): string[] => {
 export const getPostFromSlug = async (
   slug: string
 ): Promise<Post<Frontmatter>> => {
-  const postPath = `posts/${slug}.mdx`;
+  const postPath = `${POSTS_PATH}/${slug}.mdx`;
   const raw = fs.readFileSync(postPath, "utf8");
 
   const { content, frontmatter } = await compileMDX<{
