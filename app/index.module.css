@@ -1,0 +1,13 @@
+.footer_margin {
+  margin-bottom: 9rem;
+}
+
+.footer_links {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .Col_unset_order {
+    order: unset !important;
+  }
+}
