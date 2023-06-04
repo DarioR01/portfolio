@@ -21,7 +21,7 @@ const POSTS_PATH = path.join(process.cwd(), "posts");
 export const getSlugs = (): string[] => {
   const paths = globSync(`${POSTS_PATH}/*.mdx`);
   return paths.map((path): string => {
-    const parts = path.split("\\");
+    const parts = path.split("/");
     const fileName = parts[parts.length - 1];
     const [slug, _ext] = fileName.split(".");
     return slug;
