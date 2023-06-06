@@ -1,63 +1,52 @@
-"use client";
-
-import Link from "next/link";
-import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { Instagram, LinkedIn, GitHub } from "./socialSVG";
-import style from "./index.module.css";
+import Image from "next/image";
+import { LinkedIn, GitHub } from "./socialSVG";
 
 const Home = () => {
   return (
     <>
-      <Container className="d-flex flex-column">
-        <Row>
-          <Col
-            className={`d-flex flex-column order-2 align-items-center justify-content-center col-md ${style.Col_unset_order}`}
-          >
-            <Image alt="image" src="/profile.png" />
-          </Col>
-          <Col
-            className={`d-flex flex-column order-1 justify-content-center col-md ${style.Col_unset_order}`}
-          >
+      <main className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex grow">
+        <div className="md:grid md:grid-cols-2 items-center">
+          <div className="flex flex-col md:order-2">
+            <Image
+              alt="image"
+              src="/profile.png"
+              height={700}
+              width={700}
+              priority
+            />
+          </div>
+          <div>
             <h1>
-              <p className="blockquote-footer mb-0 initialism">HELLO</p>
-              <span className="display-1">
+              <blockquote className="font-bold text-4xl before:content-['—'] before:mr-2 text-gray-500">
+                HELLO
+              </blockquote>
+              <span className="text-7xl">
                 <strong>
                   I&#39;m <span className="text-primary">Dario</span> Russo
                 </strong>
               </span>
             </h1>
 
-            <p className="mb-5 blockquote">
+            <p className="font-normal text-xl text-gray-800 mb-12">
               This is Dario Russo Web Developer based in London, looking for a
               job around my area. Writing more and more and more more more more
               more more more more more more more. Please wrap ffs. yay :D
             </p>
 
-            <div className="mb-5">
-              <Button variant="primary" size="lg">
-                DOWNLOAD CV
-              </Button>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            <button className="bg-primary-500 text-white text-2xl p-4 rounded-md hover:bg-primary-600 shadow-lg mb-6">
+              DOWNLOAD CV
+            </button>
+          </div>
+        </div>
+      </main>
 
-      <footer className={`${style.footer_margin}`}>
-        <Container>
-          <Link className={style.footer_links} href="">
-            <LinkedIn />
-          </Link>
-          <Link className={style.footer_links} href="">
-            <GitHub />
-          </Link>
-          <Link className={style.footer_links} href="">
-            <Instagram />
-          </Link>
-        </Container>
+      <footer className="flex flex-1 container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grow-0 mb-10">
+        <a className="mr-4" href="https://www.linkedin.com/in/dariorusso052001">
+          <LinkedIn className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
+        </a>
+        <a className="mr-4" href="https://github.com/DarioR01">
+          <GitHub className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
+        </a>
       </footer>
     </>
   );

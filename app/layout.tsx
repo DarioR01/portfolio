@@ -1,10 +1,9 @@
 "use client";
 
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.css";
-import { SSRProvider } from "react-bootstrap";
 import { Montserrat } from "next/font/google";
-import PortfolioNav from "@/components/PortfolioNav";
+import PortfolioNav from "@/app/PortfolioNav";
+import { Instagram } from "./socialSVG";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -15,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={` vh-100 d-flex flex-column`}>
+      <body className="h-screen flex flex-col">
         <PortfolioNav />
-        <SSRProvider>{children}</SSRProvider>
+        {children}
       </body>
     </html>
   );

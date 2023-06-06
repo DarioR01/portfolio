@@ -1,10 +1,10 @@
 import { getAllPosts } from "../../util/getPosts";
 import BlogList from "../../components/BlogList";
+import { Instagram } from "../socialSVG";
+import Link from "next/link";
 
 const Contact = async () => {
-  const posts = await getAllPosts();
-
-  return <h1>Contact</h1>;
+  return <span>Contact</span>;
 };
 
 export default Contact;

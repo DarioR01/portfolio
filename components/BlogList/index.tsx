@@ -1,12 +1,9 @@
-"use client";
-
 import { Post, Frontmatter } from "../../util/getPosts";
 import BlogCard from "../BlogCard";
-import Container from "react-bootstrap/Container";
 
 const BlogList = ({ posts }: { posts: Post<Frontmatter>[] }) => {
   return (
-    <Container fluid="lg">
+    <div className="container lg">
       <ul className="list-unstyled">
         {posts.map((post) => {
           const { frontmatter, serialized } = post;
@@ -23,7 +20,7 @@ const BlogList = ({ posts }: { posts: Post<Frontmatter>[] }) => {
           );
         })}
       </ul>
-    </Container>
+    </div>
   );
 };
 

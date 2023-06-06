@@ -1,6 +1,5 @@
 import { getAllPosts } from "../../util/getPosts";
 import BlogList from "../../components/BlogList";
-import Container from "react-bootstrap/Container";
 
 const Blog = async () => {
   const posts = await getAllPosts();
