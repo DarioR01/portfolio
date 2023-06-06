@@ -6,10 +6,15 @@ const Blog = async () => {
 
   return (
     <>
-      <main className="container">
-        <h1 className="h1 display-1 my-5">
-          <strong>Blog Posts</strong>
-        </h1>
+      <main className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-5">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            This is My Blog
+          </h2>
+          <p className="mt-2 text-lg leading-8 text-gray-600">
+            See my storm of ideas.
+          </p>
+        </div>
         <BlogList posts={posts} />
       </main>
     </>
