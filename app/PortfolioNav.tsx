@@ -8,7 +8,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -17,7 +17,7 @@ export default function Example() {
 
   const [navigation, setNavigation] = useState([
     { name: "Home", href: "/", current: false },
-    { name: "Blog", href: "/blog", current: false },
+    { name: "About", href: "/about", current: false },
     { name: "Projects", href: "/projects", current: false },
     { name: "Contact", href: "/contact", current: false },
   ]);
