@@ -33,18 +33,26 @@ const Home = () => {
               more more more more more more more. Please wrap ffs. yay :D
             </p>
 
-            <button className="bg-primary-500 text-white text-2xl p-4 rounded-md hover:bg-primary-600 shadow-lg mb-6">
+            <a
+              href="/DarioRusso_CV.pdf"
+              target="_blank"
+              className="bg-primary-500 text-white text-2xl p-4 rounded-md hover:bg-primary-600 shadow-lg mb-6"
+            >
               DOWNLOAD CV
-            </button>
+            </a>
           </div>
         </div>
       </main>
 
       <footer className="flex flex-1 container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grow-0 mb-10">
-        <a className="mr-4" href="https://www.linkedin.com/in/dariorusso052001">
+        <a
+          className="mr-4"
+          href="https://www.linkedin.com/in/dariorusso052001"
+          target="_blank"
+        >
           <LinkedIn className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>
-        <a className="mr-4" href="https://github.com/DarioR01">
+        <a className="mr-4" href="https://github.com/DarioR01" target="_blank">
           <GitHub className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>
       </footer>
