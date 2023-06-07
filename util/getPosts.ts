@@ -8,6 +8,7 @@ export type Frontmatter = {
   date: string;
   coverImage: string;
   slug: string;
+  tag: string;
 };
 export type Post<TFrontmatter> = {
   serialized: string;
@@ -36,6 +37,7 @@ export const getPostFromSlug = async (
     date: string;
     coverImage: string;
     slug: string;
+    tag: string;
   }>({
     source: raw,
     options: { parseFrontmatter: true },
