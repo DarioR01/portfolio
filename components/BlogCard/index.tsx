@@ -36,7 +36,7 @@ const BlogCard = ({
 
       <div className="group relative px-4">
         <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-          <Link href={`blog/${slug}`}>
+          <Link href={`projects/${slug}`}>
             <span className="absolute inset-0" />
             {title}
           </Link>
