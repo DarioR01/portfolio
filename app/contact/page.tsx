@@ -17,11 +17,8 @@ const Contact = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const [message, setMessage] = useState('');
-  const [postError, setPostError] = useState(false);
-  const [postSuccess, setPostSuccess] = useState(false);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    setPostError(false);
     const res = await fetch('/api/contact', {
       body: JSON.stringify({
         first: data.first,
@@ -35,25 +32,13 @@ const Contact = () => {
       method: 'POST',
     });
 
-    const { error } = await res.json();
-    if (res.ok) {
-      setPostSuccess(true);
-    }
-    if (error) {
-      setPostError(true);
-      return;
-    }
+    await res.json();
   };
 
   return (
     <main className="2xl:flex 2xl:grow 2xl:items-center container mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
       <div className="h-full 2xl:flex 2xl:items-center mt-3">
         <div className="relative">
-          {postSuccess && (
-            <p className="-top-20 bg-green-500 p-5 w-3/4 mb-3 rounded-lg">
-              Success
-            </p>
-          )}
           <div className="2xl:grid 2xl:grid-cols-3 shadow-lg shadow-primary-500/20">
             <div className="flex flex-col bg-primary-500 p-11 col-span-1 rounded-t-lg 2xl:rounded-none 2xl:rounded-l-lg">
               <h1 className="text-white text-3xl font-semibold">
