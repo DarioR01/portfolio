@@ -1,11 +1,14 @@
-"use client";
+'use client';
 
-import "./globals.css";
-import { Montserrat } from "next/font/google";
-import PortfolioNav from "@/app/PortfolioNav";
-import { Instagram } from "./socialSVG";
+import './globals.css';
+import { Montserrat } from 'next/font/google';
+import PortfolioNav from '@/app/PortfolioNav';
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Montserrat({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col">
+      <body className={`${inter.className} flex flex-col h-screen`}>
         <PortfolioNav />
         {children}
       </body>

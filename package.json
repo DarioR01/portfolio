@@ -27,6 +27,7 @@
     "nodemailer": "^6.9.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.44.3",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-figure": "^1.0.1",
     "rehype-highlight": "^6.0.0",
