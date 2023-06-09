@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { LinkedIn, GitHub } from "./socialSVG";
+import Layout from "@/layouts/Navbar/layout";
 
 const Home = () => {
   return (
-    <>
+    <Layout>
       <main className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex grow">
         <div className="md:grid md:grid-cols-2 items-center">
           <div className="flex flex-col md:order-2">
@@ -56,7 +57,7 @@ const Home = () => {
           <GitHub className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>
       </footer>
-    </>
+    </Layout>
   );
 };
 
