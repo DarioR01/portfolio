@@ -65,7 +65,7 @@ export default function Example() {
   }, [pathName]);
 
   return (
-    <Disclosure as="nav" className="bg-gray-800 z-10">
+    <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -123,7 +123,7 @@ export default function Example() {
                                   leave="transition ease-in duration-75"
                                   leaveFrom="transform opacity-100 scale-100"
                                   leaveTo="transform opacity-0 scale-95"
-                                  className="before:content-[''] before:block before:h-5 before:w-full absolute right-0"
+                                  className="before:content-[''] before:block before:h-5 before:w-full absolute right-0 z-10"
                                 >
                                   <Popover.Panel className="w-56 origin-top-right rounded-md bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <ul className="px-1 py-1 ">
