@@ -7,7 +7,6 @@ import rehypeFigure from "rehype-figure";
 import "highlight.js/styles/atom-one-dark.css";
 import { JSX, ClassAttributes, OlHTMLAttributes } from "react";
 import type { MDXComponents } from "mdx/types";
-import Layout from "@/layouts/Navbar/layout";
 
 const MdxComponents = {
   h1: (props: React.HTMLProps<HTMLHeadingElement>) => (
@@ -86,23 +85,21 @@ const MdxComponents = {
 
 const MdxContent = ({ source }: { source: string }) => {
   return (
-    <Layout>
-      <MDXRemote
-        source={source}
-        options={{
-          parseFrontmatter: true,
-          mdxOptions: {
-            rehypePlugins: [
-              rehypeSlug,
-              [rehypeAutolinkHeadings, { behaviour: "wrap" }],
-              rehypeHighlight,
-              rehypeFigure,
-            ],
-          },
-        }}
-        components={MdxComponents}
-      />
-    </Layout>
+    <MDXRemote
+      source={source}
+      options={{
+        parseFrontmatter: true,
+        mdxOptions: {
+          rehypePlugins: [
+            rehypeSlug,
+            [rehypeAutolinkHeadings, { behaviour: "wrap" }],
+            rehypeHighlight,
+            rehypeFigure,
+          ],
+        },
+      }}
+      components={MdxComponents}
+    />
   );
 };
 
