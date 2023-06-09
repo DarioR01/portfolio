@@ -204,21 +204,23 @@ export default function Example() {
                           leaveTo="transform opacity-0 scale-95"
                         >
                           <Popover.Panel>
-                            {item.subMenu.map((subItem) => (
-                              <li key={subItem.name}>
-                                <a
-                                  href={subItem.href}
-                                  className={classNames(
-                                    item.current
-                                      ? "bg-primary-500/70 text-white"
-                                      : "text-gray-300 hover:bg-primary-500 hover:text-white",
-                                    "block rounded-md px-8 py-2 text-sm font-medium text-white"
-                                  )}
-                                >
-                                  {subItem.name}
-                                </a>
-                              </li>
-                            ))}
+                            <ul>
+                              {item.subMenu.map((subItem) => (
+                                <li key={subItem.name}>
+                                  <a
+                                    href={subItem.href}
+                                    className={classNames(
+                                      item.current
+                                        ? "bg-primary-500/70 text-white"
+                                        : "text-gray-300 hover:bg-primary-500 hover:text-white",
+                                      "block rounded-md px-8 py-2 text-sm font-medium text-white"
+                                    )}
+                                  >
+                                    {subItem.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
                           </Popover.Panel>
                         </Transition>
                       </Popover>
