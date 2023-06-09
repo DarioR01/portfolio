@@ -39,8 +39,8 @@ const Contact = () => {
   return (
     <Layout>
       <main className="2xl:flex 2xl:grow 2xl:items-center container mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
-        <div className="h-full 2xl:flex 2xl:items-center mt-3">
-          <div className="relative">
+        <div className="h-full 2xl:flex 2xl:items-center">
+          <div className="relative mt-3">
             <div className="2xl:grid 2xl:grid-cols-3 shadow-lg shadow-primary-500/20">
               <div className="flex flex-col bg-primary-500 p-11 col-span-1 rounded-t-lg 2xl:rounded-none 2xl:rounded-l-lg">
                 <h1 className="text-white text-3xl font-semibold">
@@ -86,7 +86,7 @@ const Contact = () => {
               <div className="col-span-2 p-11 bg-white">
                 <h2 className="text-3xl font-bold">Get in Touch</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                  <div className="flex justify-between gap-x-1.5 mt-4">
+                  <div className="md:flex justify-between gap-x-1.5 mt-4">
                     <label className="block grow">
                       <span
                         className={`text-gray-700 ${
