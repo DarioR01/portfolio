@@ -47,21 +47,21 @@ const Contact = () => {
                   Let&#39;s get in touch
                 </h1>
                 <div className="flex items-center grow mt-4 2xl:mt-0">
-                  <div className="flex flex-col gap-y-12">
+                  <div className="flex flex-col gap-y-5 sm:gap-y-12">
                     <div className="flex gap-x-1.5 items-center">
                       <span className="border-2 rounded-full -m-1">
-                        <Phone className="fill-white" />
+                        <Phone className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
                       </span>
-                      <p className="text-white text-xl ml-3">
+                      <p className="text-white text-sm sm:text-xl ml-3">
                         <a href="tel:+447305355051">+44 7305355051</a>
                       </p>
                     </div>
 
                     <div className="flex gap-x-1.5 items-center">
                       <span className="border-2 rounded-full -m-1">
-                        <Mail className="fill-white" />
+                        <Mail className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
                       </span>
-                      <p className="text-white text-xl ml-3">
+                      <p className="text-white text-sm sm:text-xl ml-3">
                         <a href="mailto:dario.russo.052001@gmail.com">
                           dario.russo.052001@gmail.com
                         </a>
@@ -70,10 +70,10 @@ const Contact = () => {
 
                     <div className="flex gap-x-1.5 items-center">
                       <span className="border-2 rounded-full -m-1">
-                        <LinkedIn_Monocrome className="fill-white" />
+                        <LinkedIn_Monocrome className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
                       </span>
 
-                      <p className="text-white text-xl ml-3">
+                      <p className="text-white text-sm sm:text-xl ml-3">
                         <a href="https://www.linkedin.com/in/dariorusso052001">
                           Dario Russo
                         </a>
