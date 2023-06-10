@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="flex flex-1 container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grow-0 mb-10">
+      <footer className="flex container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pb-4 sm:pb-0 sm:mb-10">
         <a
           className="mr-4"
           href="https://www.linkedin.com/in/dariorusso052001"
