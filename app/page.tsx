@@ -37,7 +37,7 @@ const Home = () => {
             <a
               href="/DarioRusso_CV.pdf"
               target="_blank"
-              className="bg-primary-500 text-white text-2xl p-4 rounded-md hover:bg-primary-600 shadow-lg mb-6"
+              className="inline-block bg-primary-500 text-white p-4 text-2xl rounded-md hover:bg-primary-600 shadow-lg mb-6 max-w-20"
             >
               DOWNLOAD CV
             </a>
