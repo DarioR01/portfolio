@@ -48,37 +48,39 @@ const Contact = () => {
                 </h1>
                 <div className="flex items-center grow mt-4 2xl:mt-0">
                   <div className="flex flex-col gap-y-5 sm:gap-y-12">
-                    <div className="flex gap-x-1.5 items-center">
-                      <span className="border-2 rounded-full -m-1">
-                        <Phone className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
-                      </span>
-                      <p className="text-white text-sm sm:text-xl ml-3">
-                        <a href="tel:+447305355051">+44 7305355051</a>
-                      </p>
-                    </div>
+                    <a href="https://www.linkedin.com/in/dariorusso052001">
+                      <div className="flex gap-x-1.5 items-center">
+                        <span className="border-2 rounded-full -m-1">
+                          <LinkedIn_Monocrome className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
+                        </span>
 
-                    <div className="flex gap-x-1.5 items-center">
-                      <span className="border-2 rounded-full -m-1">
-                        <Mail className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
-                      </span>
-                      <p className="text-white text-sm sm:text-xl ml-3">
-                        <a href="mailto:dario.russo.052001@gmail.com">
-                          dario.russo.052001@gmail.com
-                        </a>
-                      </p>
-                    </div>
-
-                    <div className="flex gap-x-1.5 items-center">
-                      <span className="border-2 rounded-full -m-1">
-                        <LinkedIn_Monocrome className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
-                      </span>
-
-                      <p className="text-white text-sm sm:text-xl ml-3">
-                        <a href="https://www.linkedin.com/in/dariorusso052001">
+                        <p className="text-white text-sm sm:text-xl ml-3 underline">
                           Dario Russo
-                        </a>
-                      </p>
-                    </div>
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="mailto:dario.russo.052001@gmail.com">
+                      <div className="flex gap-x-1.5 items-center">
+                        <span className="border-2 rounded-full -m-1">
+                          <Mail className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
+                        </span>
+                        <p className="text-white text-sm sm:text-xl ml-3 underline">
+                          dario.russo.052001@gmail.com
+                        </p>
+                      </div>
+                    </a>
+
+                    <a href="tel:+447305355051">
+                      <div className="flex gap-x-1.5 items-center">
+                        <span className="border-2 rounded-full -m-1">
+                          <Phone className="h-10 w-10 sm:h-16 sm:w-16 fill-white" />
+                        </span>
+                        <p className="text-white text-sm sm:text-xl ml-3 underline">
+                          +44 7305355051
+                        </p>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
