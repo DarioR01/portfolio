@@ -47,20 +47,18 @@ const Home = () => {
 
       <footer className="flex container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pb-4 sm:pb-0 sm:mb-10">
         <a
+          aria-label="LinkedIn"
           className="mr-4"
           href="https://www.linkedin.com/in/dariorusso052001"
           target="_blank"
         >
-          <LinkedIn
-            aria-label="LinkedIn"
-            className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500"
-          />
+          <LinkedIn className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>
         <a
+          aria-label="GitHub"
           className="mr-4"
           href="https://github.com/DarioR01"
           target="_blank"
-          aria-label="GitHub"
         >
           <GitHub className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>

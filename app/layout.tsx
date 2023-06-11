@@ -24,7 +24,7 @@ export const metadata = {
     "Next.js",
   ],
   alternates: {
-    canonical: "/",
+    canonical: process.env.SITE_URL,
   },
   authors: [{ name: "Dario Russo", url: process.env.SITE_URL }],
   colorScheme: "light",
