@@ -11,9 +11,8 @@ export const metadata = {
   title: "Dario Russo Portfolio",
   description:
     "Dario Russo's portfolio. Meet Dario a very passionate web developer with 2 years of experience in building and maintaining webpages solutions.",
-  category: "portfolio",
   manifest: "/manifest.json",
-  referrer: process.env.SITE_URL,
+  referrer: "origin-when-crossorigin",
   keywords: [
     "Dario",
     "Russo",
