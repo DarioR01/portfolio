@@ -11,6 +11,7 @@ export const metadata = {
   title: "Dario Russo Portfolio",
   description:
     "Dario Russo's portfolio. Meet Dario a very passionate web developer with 2 years of experience in building and maintaining webpages solutions.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
