@@ -158,7 +158,7 @@ const About = () => {
             data={QUEEN}
           />
           <Table name="Glenthorne High School" data={GLENTHORNE} />
-          <Table name="Kenton High School" description="" data={KENTON} />
+          <Table name="Kenton High School" data={KENTON} />
         </section>
       </main>
     </>
