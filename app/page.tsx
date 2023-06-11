@@ -28,10 +28,10 @@ const Home = () => {
               </span>
             </h1>
 
-            <p className="font-normal text-xl text-gray-800 mb-12">
-              This is Dario Russo Web Developer based in London, looking for a
-              job around my area. Writing more and more and more more more more
-              more more more more more more more. Please wrap ffs. yay :D
+            <p className="font-normal text-xl text-gray-800 mb-12 text-justify">
+              A Web Developer based in London with 2 years of experience in
+              developing high-quality web applications with a strong passion for
+              learning new technologies and solving complex problems.
             </p>
 
             <a

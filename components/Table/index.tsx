@@ -17,8 +17,8 @@ const Table = ({
   const tableHeadings = Object.keys(data[0]);
 
   return (
-    <>
-      <h3 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl">
+    <article className="mt-12">
+      <h3 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl mt-4">
         {name}
       </h3>
       <p>{description}</p>
@@ -29,7 +29,7 @@ const Table = ({
               {tableHeadings.slice(1).map((heading) => (
                 <th
                   key={`${heading}`}
-                  className="px-3 py-4 first:pl-0 sm:text-xl last:pr-0 text-left border-b-2 border-gray-300"
+                  className="px-3 py-4 first:pl-0 sm:text-xl last:pr-0 text-left border-b-2 border-slate-700"
                 >
                   {heading}
                 </th>
@@ -38,13 +38,16 @@ const Table = ({
           </thead>
           <tbody>
             {data.map((item) => (
-              <tr key={item.id}>
+              <tr
+                key={item.id}
+                className="last:border-none border-b-2 border-slate-400"
+              >
                 {Object.values(item)
                   .slice(1)
                   .map((value) => (
                     <td
                       key={`${item.id}-${value}`}
-                      className="px-3 py-4 sm:text-xl first:pl-0 last:pr-0 border-b-2 border-gray-300"
+                      className="px-3 py-4 sm:text-xl first:pl-0 last:pr-0"
                     >
                       {value}
                     </td>
@@ -54,7 +57,7 @@ const Table = ({
           </tbody>
         </table>
       </div>
-    </>
+    </article>
   );
 };
 
