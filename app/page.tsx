@@ -51,9 +51,17 @@ const Home = () => {
           href="https://www.linkedin.com/in/dariorusso052001"
           target="_blank"
         >
-          <LinkedIn className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
+          <LinkedIn
+            aria-label="LinkedIn"
+            className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500"
+          />
         </a>
-        <a className="mr-4" href="https://github.com/DarioR01" target="_blank">
+        <a
+          className="mr-4"
+          href="https://github.com/DarioR01"
+          target="_blank"
+          aria-label="GitHub"
+        >
           <GitHub className="stroke-1 stroke-primary-500/50 hover:stroke-primary-500" />
         </a>
       </footer>
