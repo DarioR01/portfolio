@@ -11,7 +11,27 @@ export const metadata = {
   title: "Dario Russo Portfolio",
   description:
     "Dario Russo's portfolio. Meet Dario a very passionate web developer with 2 years of experience in building and maintaining webpages solutions.",
+  category: "portfolio",
   manifest: "/manifest.json",
+  referrer: process.env.SITE_URL,
+  keywords: [
+    "Dario",
+    "Russo",
+    "portfolio",
+    "web",
+    "developer",
+    "React",
+    "JavaScript",
+    "Next.js",
+  ],
+  authors: [{ name: "Dario Russo", url: process.env.SITE_URL }],
+  colorScheme: "light",
+  creator: "Dario Russo",
+  publisher: "Dario Russo",
+  themeColor: "#E2E8F0",
+  viewport: {
+    width: "device-width",
+  },
 };
 
 export default function RootLayout({
