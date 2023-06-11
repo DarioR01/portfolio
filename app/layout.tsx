@@ -23,6 +23,9 @@ export const metadata = {
     "JavaScript",
     "Next.js",
   ],
+  alternates: {
+    canonical: "/",
+  },
   authors: [{ name: "Dario Russo", url: process.env.SITE_URL }],
   colorScheme: "light",
   creator: "Dario Russo",
