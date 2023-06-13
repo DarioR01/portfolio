@@ -1,7 +1,7 @@
-import PortfolioNav from "@/components/PortfolioNav/PortfolioNav";
-import Table from "@/components/Table";
-import { QUEEN, GLENTHORNE, KENTON } from "./tablesData";
-import Image from "next/image";
+import PortfolioNav from '@/components/PortfolioNav/PortfolioNav';
+import Table from '@/components/Table';
+import { QUEEN, GLENTHORNE, KENTON } from './tablesData';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -71,7 +71,7 @@ const About = () => {
               />
             </div>
           </div>
-          <h1 className="text-7xl font-extrabold text-slate-900 mt-8">
+          <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 mt-8">
             About Me
           </h1>
           <p className="text-lg font-normal text-justify slate-700 mt-4">
@@ -120,11 +120,11 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-7xl font-extrabold text-slate-900 mt-8">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-slate-900 mt-8">
             Professional Experience
           </h2>
           <div className="bg-white p-4 rounded-lg mt-4">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between">
               <h3 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl">
                 <span>
                   Trainee Software Engineer
@@ -180,7 +180,7 @@ const About = () => {
           </div>
 
           <div className="bg-white p-4 rounded-lg mt-4">
-            <div className="flex justify-between">
+            <div className="flex flex-wrap justify-between">
               <h3 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl">
                 <span>
                   Demonstrator
@@ -219,7 +219,7 @@ const About = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-7xl font-extrabold text-slate-900 mt-8">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-slate-900 mt-8">
             Education
           </h2>
           <p className="text-lg font-normal text-justify slate-700 mt-4">
