@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Mail, LinkedIn_Monocrome, Phone } from "../socialSVG";
-import Layout from "@/layouts/Navbar/layout";
+import { useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { Mail, LinkedIn_Monocrome, Phone } from '../socialSVG';
+import Layout from '@/layouts/Navbar/layout';
 
 type Inputs = {
   first: string;
@@ -17,10 +17,10 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const res = await fetch("/api/contact", {
+    const res = await fetch('/api/contact', {
       body: JSON.stringify({
         first: data.first,
         last: data.last,
@@ -28,9 +28,9 @@ const Contact = () => {
         message,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      method: "POST",
+      method: 'POST',
     });
 
     await res.json();
@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="h-full 2xl:flex 2xl:items-center">
           <div className="relative mt-3">
             <div className="2xl:grid 2xl:grid-cols-3 shadow-lg shadow-primary-500/20">
-              <div className="flex flex-col bg-primary-500 p-11 col-span-1 rounded-t-lg 2xl:rounded-none 2xl:rounded-l-lg">
+              <div className="flex flex-col bg-primary-500 p-4 md:p-11 col-span-1 rounded-t-lg 2xl:rounded-none 2xl:rounded-l-lg">
                 <h1 className="text-white text-3xl font-semibold">
                   Let&#39;s get in touch
                 </h1>
@@ -92,7 +92,7 @@ const Contact = () => {
                     <label className="block grow">
                       <span
                         className={`text-gray-700 ${
-                          errors.first && "text-pink-500 mr-2"
+                          errors.first && 'text-pink-500 mr-2'
                         }`}
                       >
                         Name
@@ -105,18 +105,18 @@ const Contact = () => {
                       </span>
                       {errors.first && (
                         <span className="text-pink-500">
-                          {errors.first.message || "is required"}
+                          {errors.first.message || 'is required'}
                         </span>
                       )}
                       <input
                         type="text"
                         className={`mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0`}
-                        aria-invalid={errors.first ? "true" : "false"}
-                        {...register("first", {
+                        aria-invalid={errors.first ? 'true' : 'false'}
+                        {...register('first', {
                           required: true,
                           pattern: {
                             value: /^[a-zA-Z0-9]*$/,
-                            message: "Only characters are allowed",
+                            message: 'Only characters are allowed',
                           },
                         })}
                       />
@@ -125,7 +125,7 @@ const Contact = () => {
                     <label className="block grow">
                       <span
                         className={`text-gray-700 ${
-                          errors.last && "text-pink-500 mr-2"
+                          errors.last && 'text-pink-500 mr-2'
                         }`}
                       >
                         Surname
@@ -138,18 +138,18 @@ const Contact = () => {
                       </span>
                       {errors.last && (
                         <span className="text-pink-500">
-                          {errors.last.message || "is required"}
+                          {errors.last.message || 'is required'}
                         </span>
                       )}
                       <input
                         type="text"
                         className={`mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0`}
-                        aria-invalid={errors.last ? "true" : "false"}
-                        {...register("last", {
+                        aria-invalid={errors.last ? 'true' : 'false'}
+                        {...register('last', {
                           required: true,
                           pattern: {
                             value: /^[a-zA-Z0-9]*$/,
-                            message: "Only characters are allowed",
+                            message: 'Only characters are allowed',
                           },
                         })}
                       />
@@ -159,7 +159,7 @@ const Contact = () => {
                   <label className="block mt-4">
                     <span
                       className={`text-gray-700 ${
-                        errors.email && "text-pink-500 mr-2"
+                        errors.email && 'text-pink-500 mr-2'
                       }`}
                     >
                       Email
@@ -169,18 +169,18 @@ const Contact = () => {
                     </span>
                     {errors.email && (
                       <span className="text-pink-500">
-                        {errors.email.message || "is required"}
+                        {errors.email.message || 'is required'}
                       </span>
                     )}
                     <input
                       type="email"
                       className={`mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0`}
-                      aria-invalid={errors.email ? "true" : "false"}
-                      {...register("email", {
+                      aria-invalid={errors.email ? 'true' : 'false'}
+                      {...register('email', {
                         required: true,
                         pattern: {
                           value: /\S+@\S+\.\S+/,
-                          message: "Not Valid Email",
+                          message: 'Not Valid Email',
                         },
                       })}
                     />
