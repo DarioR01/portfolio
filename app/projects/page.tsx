@@ -21,7 +21,13 @@ const Projects = async () => {
             you would like to see me work on, please Contact Me!
           </p>
         </div>
-        <BlogList posts={posts} />
+        {posts.length === 0 ? (
+          <h2 className="text-4xl md:text-7xl font-extrabold text-slate-900 mt-8">
+            COMING UP SOON!!!
+          </h2>
+        ) : (
+          <BlogList posts={posts} />
+        )}
       </main>
     </Layout>
   );

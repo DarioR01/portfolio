@@ -1,7 +1,7 @@
-import PortfolioNav from '@/components/PortfolioNav/PortfolioNav';
-import Table from '@/components/Table';
-import { QUEEN, GLENTHORNE, KENTON } from './tablesData';
-import Image from 'next/image';
+import PortfolioNav from "@/components/PortfolioNav/PortfolioNav";
+import Table from "@/components/Table";
+import { QUEEN, GLENTHORNE, KENTON } from "./tablesData";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -13,9 +13,9 @@ const About = () => {
             <div className="row-span-2 col-span-2 bg-pink-500 h-full w-full">
               <Image
                 src="/about/dario-01.jpg"
-                width={32}
-                height={32}
-                alt="test image 1"
+                width={0}
+                height={0}
+                alt="Missing Image Coming Soon!!"
                 className="h-full w-full object-cover"
                 priority
               />
@@ -23,9 +23,9 @@ const About = () => {
             <div className="col-span-3 bg-blue-500 h-full w-full">
               <Image
                 src="/about/dario-02.jpg"
-                width={32}
-                height={32}
-                alt="test image 2"
+                width={0}
+                height={0}
+                alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
               />
@@ -33,9 +33,9 @@ const About = () => {
             <div className="row-span-2 col-span-2 bg-yellow-500 h-full w-full">
               <Image
                 src="/about/dario-03.jpg"
-                width={32}
-                height={32}
-                alt="test image 3"
+                width={0}
+                height={0}
+                alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
               />
@@ -45,7 +45,7 @@ const About = () => {
                 src="/about/dario-04.jpg"
                 width={512}
                 height={512}
-                alt="test image 4"
+                alt="Picture of Dario next to a Hippopotamus taken in London's Zoo"
                 className="object-cover"
                 priority
               />
@@ -53,9 +53,9 @@ const About = () => {
             <div className="row-span-1 col-span-2 bg-slate-500 h-full w-full">
               <Image
                 src="/about/dario-05.jpg"
-                width={32}
-                height={32}
-                alt="test image 5"
+                width={0}
+                height={0}
+                alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
               />
@@ -65,7 +65,7 @@ const About = () => {
                 src="/about/dario-06.jpg"
                 width={512}
                 height={512}
-                alt="test image 6"
+                alt="Potrait of Dario generated with AI"
                 className="object-cover"
                 priority
               />
