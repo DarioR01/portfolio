@@ -1,4 +1,4 @@
-import { Glenthorne, Queen, Kenton } from "@/app/about/tablesData";
+import { Glenthorne, Queen, Kenton } from '@/app/about/tablesData';
 
 interface TableData<T> {
   data: T[];
@@ -6,8 +6,8 @@ interface TableData<T> {
 }
 
 const Table = ({ name, data }: TableData<Glenthorne | Queen | Kenton>) => {
-  if (!data) return;
-  if (data.length === 0) return;
+  if (!data) return null;
+  if (data.length === 0) return null;
 
   const tableHeadings = Object.keys(data[0]);
 
