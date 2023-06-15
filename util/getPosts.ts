@@ -1,7 +1,7 @@
-import path from "path";
-import fs from "fs";
-import { globSync } from "glob";
-import { compileMDX } from "next-mdx-remote/rsc";
+import path from 'path';
+import fs from 'fs';
+import { globSync } from 'glob';
+import { compileMDX } from 'next-mdx-remote/rsc';
 export type Frontmatter = {
   title: string;
   description: string;
@@ -14,16 +14,16 @@ export type Post<TFrontmatter> = {
   serialized: string;
   frontmatter: TFrontmatter;
 };
-const POSTS_PATH = path.join(process.cwd(), "posts");
+const POSTS_PATH = path.join(process.cwd(), 'posts');
 
 export const getSlugs = (): string[] => {
   const paths = globSync(
-    `${process.env.ENVIRONEMENT === "local" ? "posts" : POSTS_PATH}/*.mdx`
+    `${process.env.ENVIRONEMENT === 'local' ? 'posts' : POSTS_PATH}/*.mdx`
   );
   return paths.map((path): string => {
-    const parts = path.split(process.env.ENVIRONEMENT === "local" ? "\\" : "/");
+    const parts = path.split(process.env.ENVIRONEMENT === 'local' ? '/' : '/');
     const fileName = parts[parts.length - 1];
-    const [slug, _ext] = fileName.split(".");
+    const [slug, _ext] = fileName.split('.');
     return slug;
   });
 };
@@ -31,9 +31,9 @@ export const getPostFromSlug = async (
   slug: string
 ): Promise<Post<Frontmatter>> => {
   const postPath = `${
-    process.env.ENVIRONEMENT === "local" ? "posts" : POSTS_PATH
+    process.env.ENVIRONEMENT === 'local' ? 'posts' : POSTS_PATH
   }/${slug}.mdx`;
-  const raw = fs.readFileSync(postPath, "utf8");
+  const raw = fs.readFileSync(postPath, 'utf8');
 
   const { frontmatter } = await compileMDX<{
     title: string;
