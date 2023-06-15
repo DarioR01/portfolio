@@ -8,13 +8,13 @@ const Home = () => {
       <main className="container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex grow">
         <div className="md:grid md:grid-cols-2 items-center">
           <div className="flex flex-col md:order-2">
-            <Image
+            {/* <Image
               alt="image"
               src="/profile.png"
               height={700}
               width={700}
               priority
-            />
+            /> */}
           </div>
           <div>
             <h1>
