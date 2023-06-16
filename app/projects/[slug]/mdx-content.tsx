@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
+import Youtube from "@/components/Youtube";
 import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeSlug from "rehype-slug";
@@ -8,7 +9,12 @@ import "highlight.js/styles/atom-one-dark.css";
 import { JSX, ClassAttributes, OlHTMLAttributes } from "react";
 import type { MDXComponents } from "mdx/types";
 
+type ProvidedComponents = MDXComponents & {
+  Youtube?: typeof Youtube;
+};
+
 const MdxComponents = {
+  Youtube,
   h1: (props: React.HTMLProps<HTMLHeadingElement>) => (
     <h1
       className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-6"
@@ -81,7 +87,7 @@ const MdxComponents = {
       ClassAttributes<HTMLOListElement> &
       OlHTMLAttributes<HTMLOListElement>
   ) => <code className={`${props.className} my-6`}>{props.children}</code>,
-} as MDXComponents;
+} as ProvidedComponents;
 
 const MdxContent = ({ source }: { source: string }) => {
   return (
