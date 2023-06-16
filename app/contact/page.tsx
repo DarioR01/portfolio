@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Mail, LinkedIn_Monocrome, Phone } from '../socialSVG';
+import { Check, Close } from '../socialSVG';
 import Layout from '@/layouts/Navbar/layout';
 
 type Inputs = {
@@ -17,7 +18,9 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState(-1);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const res = await fetch('/api/contact', {
@@ -33,7 +36,8 @@ const Contact = () => {
       method: 'POST',
     });
 
-    await res.json();
+    const status = res.status;
+    setStatus(status);
   };
 
   return (
@@ -197,13 +201,39 @@ const Contact = () => {
                     />
                   </label>
 
-                  <button
-                    type="submit"
-                    formNoValidate
-                    className="bg-primary-500 text-white text-xl p-3 mt-4 rounded-md hover:bg-primary-600 shadow-lg mb-6"
-                  >
-                    Send Message
-                  </button>
+                  <div className="md:flex md:gap-4">
+                    <button
+                      type="submit"
+                      formNoValidate
+                      className="bg-primary-500 text-white text-xl p-3 mt-4 rounded-md hover:bg-primary-600 shadow-lg mb-6"
+                    >
+                      Send Message
+                    </button>
+                    {(() => {
+                      switch (status) {
+                        case 201:
+                          return (
+                            <p className="my-auto">
+                              <Check className="inline fill-none stroke-green-500 border-2 border-green-500 rounded-full h-6 w-6 md:h-8 md:w-8 mr-1" />
+                              <span className="inline-block mb-auto h-full font-medium text-md md:text-lg">
+                                Thank you for reaching out.
+                              </span>
+                            </p>
+                          );
+                        case -1:
+                          return null;
+                        default:
+                          return (
+                            <p className="my-auto">
+                              <Close className="inline fill-none stroke-red-500 border-2 border-red-500 rounded-full h-6 w-6 md:h-8 md:w-8 mr-1" />
+                              <span className="inline-block align-middle mb-auto h-full font-medium text-md md:text-lg text-red-500">
+                                Error {status}: Try again later.
+                              </span>
+                            </p>
+                          );
+                      }
+                    })()}
+                  </div>
                 </form>
               </div>
             </div>

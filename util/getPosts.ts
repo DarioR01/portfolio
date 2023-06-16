@@ -21,7 +21,7 @@ export const getSlugs = (): string[] => {
     `${process.env.ENVIRONEMENT === 'local' ? 'posts' : POSTS_PATH}/*.mdx`
   );
   return paths.map((path): string => {
-    const parts = path.split(process.env.ENVIRONEMENT === 'local' ? '/' : '/');
+    const parts = path.split(process.env.ENVIRONEMENT === 'local' ? '\\' : '/');
     const fileName = parts[parts.length - 1];
     const [slug, _ext] = fileName.split('.');
     return slug;
