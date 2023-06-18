@@ -11,34 +11,34 @@ const About = () => {
         <section className="mb-8">
           <div className="grid grid-cols-5 grid-rows-3 grid-flow-row gap-2 wrap">
             <div className="row-span-2 col-span-2 bg-pink-500 h-full w-full">
-              <Image
+              {/* <Image
                 src="/about/dario-01.jpg"
                 width={0}
                 height={0}
                 alt="Missing Image Coming Soon!!"
                 className="h-full w-full object-cover"
                 priority
-              />
+              /> */}
             </div>
             <div className="col-span-3 bg-blue-500 h-full w-full">
-              <Image
+              {/* <Image
                 src="/about/dario-02.jpg"
                 width={0}
                 height={0}
                 alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
-              />
+              /> */}
             </div>
             <div className="row-span-2 col-span-2 bg-yellow-500 h-full w-full">
-              <Image
+              {/* <Image
                 src="/about/dario-03.jpg"
                 width={0}
                 height={0}
                 alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
-              />
+              /> */}
             </div>
             <div className="row-span-1 col-span-1 bg-slate-500 h-full w-full">
               <Image
@@ -51,14 +51,14 @@ const About = () => {
               />
             </div>
             <div className="row-span-1 col-span-2 bg-slate-500 h-full w-full">
-              <Image
+              {/* <Image
                 src="/about/dario-05.jpg"
                 width={0}
                 height={0}
                 alt="Missing Image Coming Soon!!"
                 className="object-cover"
                 priority
-              />
+              /> */}
             </div>
             <div className="row-span-1 col-span-1 h-full w-full">
               <Image

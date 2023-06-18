@@ -6,7 +6,7 @@ export async function GET(request: Request) {
 
   const siteMap = posts.map(({ frontmatter }) => {
     return {
-      loc: `${process.env.SITE_URL}/projects/${frontmatter.slug}.xml`,
+      loc: `${process.env.SITE_URL}/projects/${frontmatter.slug}`,
       lastmod: new Date().toISOString(),
     };
   });
