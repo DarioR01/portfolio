@@ -5,10 +5,7 @@ module.exports = {
       { userAgent: "*", disallow: "/api" },
       { userAgent: "*", allow: "/" },
     ],
-    additionalSitemaps: [
-      `${process.env.SITE_URL}/sitemap.xml`,
-      `${process.env.SITE_URL}/server-sitemap-index.xml`,
-    ],
+    additionalSitemaps: [`${process.env.SITE_URL}/server-sitemap-index.xml`],
   },
   exclude: ["/api"],
   generateRobotsTxt: true,
