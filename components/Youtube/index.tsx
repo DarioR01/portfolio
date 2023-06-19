@@ -4,7 +4,7 @@ const Youtube = ({ videoId }: { videoId: string }) => {
       id="ytplayer"
       typeof="text/html"
       className="aspect-video w-full"
-      src={`https://www.youtube.com/embed/${videoId}?autoplay=0`}
+      src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0`}
     />
   );
 };
